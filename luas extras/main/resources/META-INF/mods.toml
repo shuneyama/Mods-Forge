@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL=""
+
+[[mods]]
+modId="luasmod"
+version="${file.jarVersion}"
+displayName="Xenthor Mod - Luas"
+updateJSONURL=""
+displayURL=""
+logoFile="logo.png"
+credits=""
+authors="Shuney"
+description='''
+Mod comissionado por Shuney / @yxmashu (no discord), para a equipe do Xenthor SMP!
+'''
+
+[[dependencies.luasmod]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.luasmod]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
