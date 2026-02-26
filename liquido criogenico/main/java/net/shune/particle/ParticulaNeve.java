@@ -18,43 +18,28 @@ public class ParticulaNeve extends TextureSheetParticle {
     private boolean pousada = false;
     private int ticksPousada = 0;
     private static final int TICKS_POUSADA = 60;
-    private static final int TICKS_SEM_CHAO = 100;
-    private final boolean dentroDoLiquido;
-    private final float xInicial;
-    private final float zInicial;
-    private static final float DESLOCAMENTO_MAX_INTERNO = 5.0f / 16.0f;
+    private static final int TICKS_VIDA = 100;
+    private final float tamanhoInicial;
+    private final float tamanhoFinal;
 
-    protected ParticulaNeve(ClientLevel level, double x, double y, double z, SpriteSet sprites) {
+    protected ParticulaNeve(ClientLevel level, double x, double y, double z,
+                            double xSpeed, double ySpeed, double zSpeed, SpriteSet sprites) {
         super(level, x, y, z);
         this.pickSprite(sprites);
 
-        this.lifetime = TICKS_SEM_CHAO;
+        this.lifetime = TICKS_VIDA;
         this.angulo = random.nextFloat() * 360f;
         this.velocidadeAngulo = (random.nextFloat() - 0.5f) * 0.15f;
-        this.xInicial = (float) x;
-        this.zInicial = (float) z;
 
-        BlockPos spawnPos = BlockPos.containing(x, y, z);
-        FluidState spawnFluid = level.getFluidState(spawnPos);
-        this.dentroDoLiquido = spawnFluid.getType() == ModFluidos.LIQUIDO_CRIOGENICO_FONTE.get()
-                || spawnFluid.getType() == ModFluidos.LIQUIDO_CRIOGENICO_CORRENTEZA.get();
+        this.tamanhoInicial = 0.02f + random.nextFloat() * 0.02f;
+        this.tamanhoFinal = tamanhoInicial * 3.0f;
+        this.quadSize = tamanhoInicial;
 
-        float direcao = random.nextFloat() * (float) Math.PI * 2f;
-        float velocidade = 0.04f + random.nextFloat() * 0.04f;
+        this.xd = xSpeed != 0 ? xSpeed + (random.nextFloat() - 0.5f) * 0.02f : (random.nextFloat() - 0.5f) * 0.04f;
+        this.zd = zSpeed != 0 ? zSpeed + (random.nextFloat() - 0.5f) * 0.02f : (random.nextFloat() - 0.5f) * 0.04f;
+        this.yd = (random.nextFloat() - 0.5f) * 0.02f;
+        this.gravity = 0.002f;
 
-        if (dentroDoLiquido) {
-            this.xd = Math.cos(direcao) * velocidade * 0.3f;
-            this.zd = Math.sin(direcao) * velocidade * 0.3f;
-            this.yd = (random.nextFloat() - 0.5f) * 0.01f;
-            this.gravity = 0.001f;
-        } else {
-            this.xd = Math.cos(direcao) * velocidade;
-            this.zd = Math.sin(direcao) * velocidade;
-            this.yd = (random.nextFloat() - 0.5f) * 0.02f;
-            this.gravity = 0.002f;
-        }
-
-        this.quadSize = 0.02f + random.nextFloat() * 0.02f;
         this.alpha = 0.9f;
         this.rCol = 0.0f;
         this.gCol = 0.9f;
@@ -62,14 +47,13 @@ public class ParticulaNeve extends TextureSheetParticle {
         this.hasPhysics = false;
     }
 
-    private boolean deveIgnorar(BlockPos pos) {
+    private boolean ehBlocoSolido(BlockPos pos) {
         BlockState estado = level.getBlockState(pos);
-        if (estado.isAir()) return true;
-        if (estado.is(BlockTags.IMPERMEABLE)) return true;
+        if (estado.isAir()) return false;
+        if (estado.is(BlockTags.IMPERMEABLE)) return false;
         FluidState fluido = level.getFluidState(pos);
-        if (fluido.getType() == ModFluidos.LIQUIDO_CRIOGENICO_FONTE.get()) return true;
-        if (fluido.getType() == ModFluidos.LIQUIDO_CRIOGENICO_CORRENTEZA.get()) return true;
-        return false;
+        if (!fluido.isEmpty()) return false;
+        return true;
     }
 
     @Override
@@ -94,35 +78,21 @@ public class ParticulaNeve extends TextureSheetParticle {
         this.velocidadeAngulo += (random.nextFloat() - 0.5f) * 0.02f;
         this.velocidadeAngulo = Math.max(-0.2f, Math.min(0.2f, this.velocidadeAngulo));
 
-        if (dentroDoLiquido) {
-            double deslocX = this.x - this.xInicial;
-            double deslocZ = this.z - this.zInicial;
-            double distancia = Math.sqrt(deslocX * deslocX + deslocZ * deslocZ);
-
-            if (distancia < DESLOCAMENTO_MAX_INTERNO) {
-                this.xd += Math.sin(this.angulo) * 0.0003f;
-                this.zd += Math.cos(this.angulo) * 0.0003f;
-            } else {
-                this.xd -= deslocX * 0.05f;
-                this.zd -= deslocZ * 0.05f;
-            }
-            this.xd *= 0.95f;
-            this.zd *= 0.95f;
-        } else {
-            this.xd += Math.sin(this.angulo) * 0.001f;
-            this.zd += Math.cos(this.angulo) * 0.001f;
-            this.xd *= 0.97f;
-            this.zd *= 0.97f;
-        }
-
+        this.xd += Math.sin(this.angulo) * 0.001f;
+        this.zd += Math.cos(this.angulo) * 0.001f;
+        this.xd *= 0.97f;
+        this.zd *= 0.97f;
         this.yd -= this.gravity;
+
+        float progresso = (float) this.age / TICKS_VIDA;
+        this.quadSize = tamanhoInicial + (tamanhoFinal - tamanhoInicial) * progresso;
 
         double xNovo = this.x + this.xd;
         double yNovo = this.y + this.yd;
         double zNovo = this.z + this.zd;
 
         BlockPos posNova = BlockPos.containing(xNovo, yNovo, zNovo);
-        if (!deveIgnorar(posNova)) {
+        if (ehBlocoSolido(posNova)) {
             pousada = true;
             this.lifetime = Integer.MAX_VALUE;
             this.xd = 0;
@@ -135,8 +105,8 @@ public class ParticulaNeve extends TextureSheetParticle {
         this.y = yNovo;
         this.z = zNovo;
 
-        int metadeVida = TICKS_SEM_CHAO - 20;
-        if (this.age > metadeVida) {
+        int fadeInicio = TICKS_VIDA - 20;
+        if (this.age > fadeInicio) {
             this.alpha -= 1.0f / 20;
         }
 
@@ -162,7 +132,7 @@ public class ParticulaNeve extends TextureSheetParticle {
         public Particle createParticle(SimpleParticleType type, ClientLevel level,
                                        double x, double y, double z,
                                        double xSpeed, double ySpeed, double zSpeed) {
-            return new ParticulaNeve(level, x, y, z, sprites);
+            return new ParticulaNeve(level, x, y, z, xSpeed, ySpeed, zSpeed, sprites);
         }
     }
 }
