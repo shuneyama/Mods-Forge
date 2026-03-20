@@ -1,0 +1,16 @@
+{
+  "lootrnerf.message.first_opener": "§a§l✦ FIRST DISCOVERER! §r§aYou found this chest first. Full loot!",
+  "lootrnerf.message.first_opener_unlucky": "§e⚠ However, luck wasn't completely on your side...",
+  "lootrnerf.message.other_opener": "§c§l✗ CHEST ALREADY DISCOVERED §r§cAnother explorer arrived first. Loot severely reduced.",
+  "lootrnerf.message.other_opener_chance": "§7You only have a %d%% chance of finding something useful...",
+  "lootrnerf.command.status.title": "§6=== LootrNerf Status ===",
+  "lootrnerf.command.stats.title": "§6=== LootrNerf Statistics ===",
+  "lootrnerf.command.stats.tracked": "§7Tracked containers: §f%d",
+  "lootrnerf.command.check.title": "§6=== Container Information ===",
+  "lootrnerf.command.check.position": "§7Position: §f%s",
+  "lootrnerf.command.check.dimension": "§7Dimension: §f%s",
+  "lootrnerf.command.check.opened": "§7Status: §cAlready opened",
+  "lootrnerf.command.check.not_opened": "§7Status: §aNever opened",
+  "lootrnerf.command.reset.success": "§aContainer at %s has been reset!",
+  "lootrnerf.command.reset.not_opened": "§eThis container has not been opened by anyone yet."
+}

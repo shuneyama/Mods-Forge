@@ -1,0 +1,16 @@
+{
+  "lootrnerf.message.first_opener": "§a§l✦ PRIMEIRO DESCOBRIDOR! §r§aVocê encontrou este baú primeiro. Loot completo!",
+  "lootrnerf.message.first_opener_unlucky": "§e⚠ Porém a sorte não estava completamente do seu lado...",
+  "lootrnerf.message.other_opener": "§c§l✗ BAÚ JÁ DESCOBERTO §r§cOutro explorador chegou primeiro. Loot severamente reduzido.",
+  "lootrnerf.message.other_opener_chance": "§7Você tem apenas %d%% de chance de encontrar algo útil...",
+  "lootrnerf.command.status.title": "§6=== LootrNerf Status ===",
+  "lootrnerf.command.stats.title": "§6=== LootrNerf Estatísticas ===",
+  "lootrnerf.command.stats.tracked": "§7Containers rastreados: §f%d",
+  "lootrnerf.command.check.title": "§6=== Informações do Container ===",
+  "lootrnerf.command.check.position": "§7Posição: §f%s",
+  "lootrnerf.command.check.dimension": "§7Dimensão: §f%s",
+  "lootrnerf.command.check.opened": "§7Status: §cJá aberto",
+  "lootrnerf.command.check.not_opened": "§7Status: §aNunca aberto",
+  "lootrnerf.command.reset.success": "§aContainer em %s foi resetado!",
+  "lootrnerf.command.reset.not_opened": "§eEste container ainda não foi aberto por ninguém."
+}

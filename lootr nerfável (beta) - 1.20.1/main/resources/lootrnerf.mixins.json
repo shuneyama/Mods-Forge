@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.lootrnerf.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "lootrnerf.refmap.json",
+  "mixins": [
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
