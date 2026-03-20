@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL="https://github.com/treasurecompass/issues"
+
+[[mods]]
+modId="treasurecompass"
+version="${file.jarVersion}"
+displayName="Treasure Compass"
+displayURL="https://github.com/treasurecompass"
+logoFile="logo.png"
+credits="Criado com ajuda do Claude AI"
+authors="Você e Mika"
+description='''
+Permite vincular uma bússola a um mapa de tesouro!
+
+Como usar:
+1. Segure um mapa de tesouro em uma mão
+2. Segure uma bússola na outra mão
+3. Clique com o botão direito
+
+A bússola passa a apontar para o centro da região do mapa,
+facilitando encontrar o tesouro!
+'''
+
+[[dependencies.treasurecompass]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.treasurecompass]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
