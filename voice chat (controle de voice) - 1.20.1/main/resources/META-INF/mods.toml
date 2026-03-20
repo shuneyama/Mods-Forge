@@ -1,0 +1,39 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="voicecontrole"
+version="1.0.0"
+displayName="Voice Controle"
+description='''
+Addon para Simple Voice Chat que permite controle administrativo de voz.
+
+Funcionalidades:
+- Mutar jogadores
+- Whitelist para permitir falar mesmo que todos os jogadores estejam silencioados
+- Sistema de Voz Universal, que permite o jogador falar além do limite do voice chat
+
+'''
+authors="Shune"
+
+[[dependencies.voicecontrol]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.voicecontrol]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.voicecontrol]]
+    modId="voicechat"
+    mandatory=true
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"
