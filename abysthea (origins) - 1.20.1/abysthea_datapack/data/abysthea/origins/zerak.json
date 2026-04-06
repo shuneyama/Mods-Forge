@@ -1,0 +1,16 @@
+{
+  "powers": [
+    "abysthea:zerak/imunidade_fogo",
+    "abysthea:zerak/morto_vivo",
+    "abysthea:zerak/sem_trocas",
+    "abysthea:zerak/condenacao",
+    "abysthea:zerak/paralisia"
+  ],
+  "icon": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "order": 15,
+  "impact": 2,
+  "name": "Zerak",
+  "description": "Seres flamejantes ligados ao fogo eterno. São mortos-vivos e rejeitados pelos aldeões."
+}

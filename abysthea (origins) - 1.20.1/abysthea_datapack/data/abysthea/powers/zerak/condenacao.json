@@ -1,0 +1,57 @@
+{
+  "type": "apoli:active_self",
+  "cooldown": 6000,
+  "hud_render": {
+    "should_render": true
+  },
+  "entity_action": {
+    "type": "apoli:and",
+    "actions": [
+      {
+        "type": "apoli:area_of_effect",
+        "radius": 5,
+        "bientity_action": {
+          "type": "apoli:target_action",
+          "action": {
+            "type": "apoli:apply_effect",
+            "effect": {
+              "effect": "minecraft:weakness",
+              "duration": 1200,
+              "amplifier": 0,
+              "is_ambient": false,
+              "show_particles": true,
+              "show_icon": true
+            }
+          }
+        },
+        "bientity_condition": {
+          "type": "apoli:target_condition",
+          "condition": {
+            "type": "apoli:living"
+          }
+        }
+      },
+      {
+        "type": "apoli:play_sound",
+        "sound": "minecraft:entity.blaze.shoot",
+        "volume": 1.0,
+        "pitch": 0.5
+      },
+      {
+        "type": "apoli:spawn_particles",
+        "particle": "minecraft:flame",
+        "count": 30,
+        "spread": {
+          "x": 2.0,
+          "y": 1.0,
+          "z": 2.0
+        }
+      }
+    ]
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "name": "Condenação",
+  "description": "Aplica Fraqueza I por 1 minuto em todos ao redor. Recarga: 5min."
+}

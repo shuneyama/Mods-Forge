@@ -1,0 +1,15 @@
+{
+  "powers": [
+    "abysthea:varins/forca_canina",
+    "abysthea:varins/carnivoro",
+    "abysthea:varins/defesa_canina",
+    "abysthea:varins/investida_do_predador"
+  ],
+  "icon": {
+    "item": "minecraft:bone"
+  },
+  "order": 14,
+  "impact": 2,
+  "name": "Varins",
+  "description": "Seres com traços caninos, fortes e leais. Sua dieta é restrita a carnes, mas possuem força natural e instintos de predador."
+}

@@ -1,0 +1,13 @@
+{
+    "type": "apoli:action_on_callback",
+    "entity_action_gained": {
+        "type": "apoli:execute_command",
+        "command": "sunburn 1"
+    },
+    "entity_action_lost": {
+        "type": "apoli:execute_command",
+        "command": "sunburn 0"
+    },
+    "name": "Queima Solar",
+    "description": "Você queima sob o sol sem proteção na cabeça ou guarda-chuva."
+}

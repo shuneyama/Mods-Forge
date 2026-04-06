@@ -1,0 +1,1 @@
+{"type":"apoli:stacking_status_effect","min_stacks":1,"max_stacks":1,"duration_per_stack":60,"tick_rate":40,"effect":{"effect":"minecraft:hunger","amplifier":0,"is_ambient":true,"show_particles":false,"show_icon":true},"condition":{"type":"apoli:exposed_to_sun"},"name":"Fadiga Vampírica","description":"Você sente fome extra sob o sol."}

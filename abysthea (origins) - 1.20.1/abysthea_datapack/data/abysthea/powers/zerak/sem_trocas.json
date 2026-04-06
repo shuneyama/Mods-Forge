@@ -1,0 +1,15 @@
+{
+  "type": "apoli:prevent_entity_use",
+  "name": "Rejeitado pelos Aldeões",
+  "description": "Aldeões não trocam com você.",
+  "bientity_condition": {
+    "type": "apoli:target_condition",
+    "condition": {
+      "type": "apoli:or",
+      "conditions": [
+        { "type": "apoli:entity_type", "entity_type": "minecraft:villager" },
+        { "type": "apoli:entity_type", "entity_type": "minecraft:wandering_trader" }
+      ]
+    }
+  }
+}

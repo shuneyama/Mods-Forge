@@ -1,0 +1,8 @@
+{
+  "type": "apoli:invulnerability",
+  "name": "Imunidade ao Fogo",
+  "description": "Você é imune a dano de fogo e lava.",
+  "damage_condition": {
+    "type": "apoli:fire"
+  }
+}

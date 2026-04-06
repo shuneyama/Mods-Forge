@@ -1,0 +1,1 @@
+{"type":"apoli:action_on_hit","cooldown":40,"entity_action":{"type":"apoli:spawn_particles","particle":"minecraft:item_slime","count":10},"bientity_action":{"type":"apoli:target_action","action":{"type":"apoli:apply_effect","effect":{"effect":"minecraft:slowness","duration":60,"amplifier":0}}},"name":"Ataque Gelatinoso","description":"Seus ataques aplicam Lentidão brevemente."}

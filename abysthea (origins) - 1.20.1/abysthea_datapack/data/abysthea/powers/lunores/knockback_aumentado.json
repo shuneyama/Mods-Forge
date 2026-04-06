@@ -1,0 +1,1 @@
+{"type":"apoli:action_when_damage_taken","entity_action":{"type":"apoli:and","actions":[{"type":"apoli:add_velocity","space":"local","x":0,"y":0.5,"z":-1.2},{"type":"apoli:play_sound","sound":"minecraft:entity.rabbit.hurt","volume":0.5,"pitch":1.5}]},"name":"Knockback Aumentado","description":"Você é arremessado com mais força ao ser atingido."}

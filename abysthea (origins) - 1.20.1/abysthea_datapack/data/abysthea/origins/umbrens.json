@@ -1,0 +1,16 @@
+{
+  "powers": [
+    "abysthea:umbrens/visao_noturna",
+    "abysthea:umbrens/haste_profundo",
+    "abysthea:umbrens/fraqueza_solar",
+    "abysthea:umbrens/fadiga_solar",
+    "abysthea:umbrens/emboscada_silenciosa"
+  ],
+  "icon": {
+    "item": "minecraft:coal"
+  },
+  "order": 13,
+  "impact": 2,
+  "name": "Umbrens",
+  "description": "Seres das sombras e profundezas. Possuem visão noturna e pressa nas profundezas, mas enfraquecem sob a luz do sol."
+}

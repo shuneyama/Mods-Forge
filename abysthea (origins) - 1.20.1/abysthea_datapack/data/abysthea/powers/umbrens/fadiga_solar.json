@@ -1,0 +1,20 @@
+{
+  "type": "apoli:stacking_status_effect",
+  "min_stacks": 1,
+  "max_stacks": 1,
+  "duration_per_stack": 40,
+  "tick_rate": 20,
+  "effect": {
+    "effect": "minecraft:mining_fatigue",
+    "amplifier": 0,
+    "is_ambient": true,
+    "show_particles": false,
+    "show_icon": true
+  },
+  "condition": {
+    "type": "apoli:exposed_to_sun"
+  },
+  "name": "Fadiga Solar",
+  "description": "Você recebe Fadiga I quando exposto ao sol.",
+  "hidden": true
+}

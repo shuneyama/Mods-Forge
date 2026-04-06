@@ -1,0 +1,34 @@
+{
+  "type": "apoli:active_self",
+  "cooldown": 900,
+  "hud_render": {
+    "should_render": true
+  },
+  "entity_action": {
+    "type": "apoli:and",
+    "actions": [
+      {
+        "type": "apoli:apply_effect",
+        "effect": {
+          "effect": "minecraft:resistance",
+          "duration": 200,
+          "amplifier": 0,
+          "is_ambient": false,
+          "show_particles": true,
+          "show_icon": true
+        }
+      },
+      {
+        "type": "apoli:play_sound",
+        "sound": "minecraft:entity.wolf.howl",
+        "volume": 1.5,
+        "pitch": 0.8
+      }
+    ]
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "name": "Defesa Canina",
+  "description": "Uiva e recebe Resistência I por 10s. Recarga: 45s."
+}

@@ -1,0 +1,1 @@
+{"type":"apoli:active_self","cooldown":600,"hud_render":{"should_render":true},"entity_action":{"type":"apoli:execute_command","command":"fluidform 200"},"key":{"key":"key.origins.secondary_active"},"name":"Forma Fluida","description":"Você se torna imune a projéteis por 10 segundos. Recarga: 30s."}

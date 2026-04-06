@@ -1,0 +1,16 @@
+{
+    "powers": [
+        "abysthea:sangris/forca_vampirica",
+        "abysthea:sangris/queima_solar",
+        "abysthea:sangris/fadiga_vampirica",
+        "abysthea:sangris/o_vinho",
+        "abysthea:sangris/velocidade_mortal"
+    ],
+    "icon": {
+        "item": "minecraft:redstone"
+    },
+    "order": 9,
+    "impact": 2,
+    "name": "Sangris",
+    "description": "Seres ligados à Essência da Fome. Alimentam-se da vitalidade alheia, vivendo nas sombras."
+}

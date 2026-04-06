@@ -1,0 +1,60 @@
+{
+  "type": "apoli:active_self",
+  "cooldown": 6000,
+  "hud_render": {
+    "should_render": true
+  },
+  "entity_action": {
+    "type": "apoli:and",
+    "actions": [
+      {
+        "type": "apoli:raycast",
+        "distance": 8,
+        "block": false,
+        "entity": true,
+        "shape_type": "visual",
+        "fluid_handling": "none",
+        "bientity_action": {
+          "type": "apoli:target_action",
+          "action": {
+            "type": "apoli:and",
+            "actions": [
+              {
+                "type": "apoli:apply_effect",
+                "effect": {
+                  "effect": "minecraft:slowness",
+                  "duration": 600,
+                  "amplifier": 1,
+                  "is_ambient": false,
+                  "show_particles": true,
+                  "show_icon": true
+                }
+              },
+              {
+                "type": "apoli:set_on_fire",
+                "duration": 3
+              }
+            ]
+          }
+        },
+        "bientity_condition": {
+          "type": "apoli:target_condition",
+          "condition": {
+            "type": "apoli:living"
+          }
+        }
+      },
+      {
+        "type": "apoli:play_sound",
+        "sound": "minecraft:entity.blaze.ambient",
+        "volume": 1.0,
+        "pitch": 0.7
+      }
+    ]
+  },
+  "key": {
+    "key": "key.origins.secondary_active"
+  },
+  "name": "Paralisia",
+  "description": "Alvo olhado recebe Lentidão II por 30s e pega fogo. Recarga: 5min."
+}

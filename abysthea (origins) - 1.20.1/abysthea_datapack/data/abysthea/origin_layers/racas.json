@@ -1,0 +1,24 @@
+{
+  "order": 0,
+  "origins": [
+    "abysthea:aeris",
+    "abysthea:drakarens",
+    "abysthea:elaris",
+    "abysthea:glins",
+    "abysthea:humano",
+    "abysthea:lunores",
+    "abysthea:lyris",
+    "abysthea:nyrens",
+    "abysthea:ordanis",
+    "abysthea:sangris",
+    "abysthea:silvaris",
+    "abysthea:skavis",
+    "abysthea:thatalos",
+    "abysthea:umbrens",
+    "abysthea:varins",
+    "abysthea:zerak"
+  ],
+  "name": "Raças de Abysthea",
+  "missing_name": "Sem Raça",
+  "missing_description": "Você não possui nenhuma raça."
+}

@@ -1,0 +1,1 @@
+{"type":"apoli:active_self","cooldown":700,"hud_render":{"should_render":true},"entity_action":{"type":"apoli:execute_command","command":"poisonbite 100 600"},"key":{"key":"key.origins.secondary_active"},"name":"Mordida Venenosa","description":"Ative e ataque para aplicar Veneno I por 30s. Recarga: 35s."}

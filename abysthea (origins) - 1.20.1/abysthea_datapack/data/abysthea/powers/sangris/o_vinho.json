@@ -1,0 +1,1 @@
+{"type":"apoli:active_self","cooldown":3600,"hud_render":{"should_render":true},"entity_action":{"type":"apoli:execute_command","command":"vampirebite 100 7"},"key":{"key":"key.origins.primary_active"},"name":"O Vinho","description":"Ative e ataque para sugar 5 HP e 7 de Fome do inimigo. Recarga: 3m."}

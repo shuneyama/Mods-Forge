@@ -1,0 +1,16 @@
+{
+  "type": "apoli:active_self",
+  "cooldown": 1200,
+  "hud_render": {
+    "should_render": true
+  },
+  "entity_action": {
+    "type": "apoli:execute_command",
+    "command": "backstab 300"
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "name": "Emboscada Silenciosa",
+  "description": "Por 15s, ataques pelas costas causam dano crítico. Recarga: 1m."
+}

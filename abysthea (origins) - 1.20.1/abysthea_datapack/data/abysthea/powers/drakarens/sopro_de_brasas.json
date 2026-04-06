@@ -1,0 +1,1 @@
+{"type":"apoli:active_self","cooldown":400,"hud_render":{"should_render":true},"entity_action":{"type":"apoli:execute_command","command":"conebreath 40 8 35 4 5 flame"},"key":{"key":"key.origins.primary_active"},"name":"Sopro de Brasas","description":"Você cospe fogo em cone à sua frente. Recarga: 20s."}

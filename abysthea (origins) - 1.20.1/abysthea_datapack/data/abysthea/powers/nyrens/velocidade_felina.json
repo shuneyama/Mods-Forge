@@ -1,0 +1,1 @@
+{"type":"apoli:stacking_status_effect","min_stacks":1,"max_stacks":1,"duration_per_stack":40,"tick_rate":20,"effect":{"effect":"minecraft:speed","amplifier":0,"is_ambient":true,"show_particles":false,"show_icon":true},"name":"Velocidade Felina","description":"Você possui Velocidade I permanente."}

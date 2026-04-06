@@ -1,0 +1,16 @@
+{
+  "type": "apoli:active_self",
+  "cooldown": 900,
+  "hud_render": {
+    "should_render": true
+  },
+  "entity_action": {
+    "type": "apoli:execute_command",
+    "command": "predatorcharge 40 200"
+  },
+  "key": {
+    "key": "key.origins.secondary_active"
+  },
+  "name": "Investida do Predador",
+  "description": "Dash explosivo. Se atingir inimigo, aplica Sangramento por 10s. Recarga: 45s."
+}

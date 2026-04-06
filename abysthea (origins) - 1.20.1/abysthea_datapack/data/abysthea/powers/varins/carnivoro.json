@@ -1,0 +1,17 @@
+{
+  "type": "apoli:prevent_item_use",
+  "name": "Carnívoro",
+  "description": "Você só recupera fome comendo carnes.",
+  "item_condition": {
+    "type": "apoli:and",
+    "conditions": [
+      {
+        "type": "apoli:food"
+      },
+      {
+        "type": "apoli:meat",
+        "inverted": true
+      }
+    ]
+  }
+}
