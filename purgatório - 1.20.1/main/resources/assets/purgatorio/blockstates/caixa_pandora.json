@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "purgatorio:block/caixa_pandora", "y": 180 },
+    "facing=south": { "model": "purgatorio:block/caixa_pandora" },
+    "facing=west": { "model": "purgatorio:block/caixa_pandora", "y": 90 },
+    "facing=east": { "model": "purgatorio:block/caixa_pandora", "y": 270 }
+  }
+}

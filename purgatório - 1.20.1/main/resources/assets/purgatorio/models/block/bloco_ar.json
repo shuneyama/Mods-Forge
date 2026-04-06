@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "all": "purgatorio:block/bloco_ar"
+  }
+}
