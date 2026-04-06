@@ -12,7 +12,6 @@ public class TreasureCompass {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public TreasureCompass() {
-        // Registra o handler de eventos
         MinecraftForge.EVENT_BUS.register(new CompassLinkHandler());
 
         LOGGER.info("Treasure Compass Mod carregado!");
