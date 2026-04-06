@@ -185,7 +185,7 @@ public class VoiceControlCommands {
         }
     }
 
-    // ==================== LISTAS ====================
+    // ==================== LISTA ====================
 
     private static int listaMutados(CommandContext<CommandSourceStack> context) {
         Set<UUID> mutados = MuteManager.getMutedPlayers();
