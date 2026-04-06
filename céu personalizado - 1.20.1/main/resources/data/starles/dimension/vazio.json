@@ -1,0 +1,11 @@
+{
+    "type": "starles:vazio",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "starles:vazio",
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "starles:vazio_plains"
+        }
+    }
+}
