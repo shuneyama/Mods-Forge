@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.abysthea.addon.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "abysthea_addon.refmap.json",
+  "mixins": [
+    "MixinEntity",
+    "MixinBlockState"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="abysthea_addon"
+version="1.2"
+displayName="Abysthea Addon"
+description=""
+
+[[mixins]]
+config="abysthea_addon.mixins.json"
+
+[[dependencies.abysthea_addon]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.abysthea_addon]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
