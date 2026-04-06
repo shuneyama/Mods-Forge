@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 public class LuaClientRenderer {
 
     public static TipoLua luaCliente = TipoLua.NORMAL;
-    
+
     public static float[] getCorLua() {
         return switch (luaCliente) {
             case DEUSA -> new float[]{1.0f, 0.9f, 0.3f};
