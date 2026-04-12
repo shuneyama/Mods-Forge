@@ -43,6 +43,14 @@ public class OverworldRiftRenderer {
             timeAlpha = 0f;
         } else if (dayTime < 7500) {
             timeAlpha = (float)(dayTime - 7000) / 500f;
+        } else if (dayTime < 16500) {
+            timeAlpha = 1f;
+        } else if (dayTime < 17000) {
+            timeAlpha = 1f - (float)(dayTime - 16500) / 500f;
+        } else if (dayTime < 19000) {
+            timeAlpha = 0f;
+        } else if (dayTime < 19500) {
+            timeAlpha = (float)(dayTime - 19000) / 500f;
         } else {
             timeAlpha = 1f;
         }
@@ -56,12 +64,8 @@ public class OverworldRiftRenderer {
 
         float luminance = r * 0.299f + g * 0.587f + b * 0.114f;
 
-        float celestialAngle = mc.level.getSunAngle(partialTick);
-        float sunAtZenith = (float) Math.sin(celestialAngle * Math.PI * 2.0);
-        float sunFade = 1f - Math.max(0f, sunAtZenith * sunAtZenith * sunAtZenith);
-
         float alpha = 1f - Math.min(1f, luminance * 2.5f);
-        alpha = Math.max(0.2f, alpha) * sunFade * timeAlpha;
+        alpha = Math.max(0.2f, alpha) * timeAlpha;
 
         float brighten = 0.5f;
         float tr = r + (1f - r) * brighten;
